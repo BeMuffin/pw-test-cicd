@@ -8,7 +8,7 @@ const test = base.extend<{ randomItem: string }>({
   }
 });
 
-test.only('Add random item to cart', async ({ page, randomItem }) => {
+test('Add random item to cart', async ({ page, randomItem }) => {
   await page.goto('/inventory.html');
   await page.click(randomItem);
   await page.click('.shopping_cart_link');

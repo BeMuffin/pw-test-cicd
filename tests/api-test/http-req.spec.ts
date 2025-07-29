@@ -5,7 +5,7 @@ dotenv.config();
 
 const apiKey = process.env.API_KEY;
 
-test("should get a user with id 2", async () => {
+test.only("should get a user with id 2", async () => {
   const context = await request.newContext({
     baseURL: "https://reqres.in",
     extraHTTPHeaders: {

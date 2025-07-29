@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import dotenv from "dotenv";
 dotenv.config();
 
-test.describe.only("Check cart page", async () => {
+test.describe("Check cart page", async () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("");
     await page.fill("#user-name", process.env.USER_NAME || "");
