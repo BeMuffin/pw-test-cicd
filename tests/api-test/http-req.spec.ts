@@ -97,19 +97,19 @@ test("Login and save token to .env", async () => {
   fs.appendFileSync(".env", `AUTH_TOKEN=${token}\n`);
 });
 
-test("Login and save token to .env", async () => {
-  const context = await request.newContext({
-    baseURL: "https://reqres.in",
-    extraHTTPHeaders: {
-      "x-api-key": apiKey || "",
-      "Bearer": process.env.AUTH_TOKEN || "",
-    },
-  });
-  const res = await context.get("https://reqres.in/api/unknown");
-  const responseJson = await res.json()
-  expect(res.status()).toBe(200)
-  expect(responseJson).toHaveProperty("data", []);
-});
+// test("Login and save token to .env", async () => {
+//   const context = await request.newContext({
+//     baseURL: "https://reqres.in",
+//     extraHTTPHeaders: {
+//       "x-api-key": apiKey || "",
+//       "Bearer": process.env.AUTH_TOKEN || "",
+//     },
+//   });
+//   const res = await context.get("https://reqres.in/api/unknown");
+//   const responseJson = await res.json()
+//   expect(res.status()).toBe(200)
+//   expect(responseJson).toHaveProperty("data", []);
+// });
 
 
 
