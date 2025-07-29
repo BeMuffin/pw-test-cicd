@@ -5,9 +5,9 @@ export default defineConfig({
   forbidOnly: false,
   globalSetup: './global-setup.ts',
 
-  retries: process.env.CI ? 2 : 0,
+  retries: 0,
   reporter: "html",
-  workers: 4,
+  workers: 1,
   fullyParallel: false, 
 
   use: {
