@@ -1,0 +1,20 @@
+{
+  "name": "test-framework-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Hanna",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.15.29",
+    "dotenv": "^16.5.0"
+  },
+  "dependencies": {
+    "expect-playwright": "^0.8.0"
+  }
+}
